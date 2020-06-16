@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>28 raisons pour 28 mois</title>
+	<link rel="icon" type="image/png" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-13/9d5afd180903a3f54678c146a3a1e605.ico"/>
 	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 	<style>
 		*{ margin: 0; padding: 0; }
@@ -12,9 +13,9 @@
 		} div.container {
 			width: 75%;
 			margin: auto;
-			margin-top: 50px;
+			margin-top: 50px; margin-bottom: 50px;
 			background-color: rgba(255,255,255,0.78);
-			padding: 20px 100px; border-radius: 50px;
+			padding: 20px 5%; border-radius: 50px;
 		}
 
 		h1 {
@@ -23,8 +24,8 @@
 			font-size: 48px;
 			padding-bottom: 0px;
 			margin-bottom: 30px;
-		} p#explan {
-			font-size: 24px;
+		} p#explain {
+			font-size: 20px;
 			text-align: justify;
 			margin-bottom: 50px;
 		}
@@ -33,13 +34,15 @@
 			border: 2px solid #333;
 			border-radius: 10px;
 			text-align: center;
+			padding-right: 5px;
 		} div#rcont > span {
 			border-bottom: 1px solid #333;
 			font-size: 32px;
+			padding: 0px 20px;
 		} div#rcont > #reason {
 			font-size: 32px;
 			font-style: italic;
-			margin-top: 20px; margin-bottom: 20px;
+			margin-top: 20px; margin-bottom: 30px; padding: 0px 30px;
 		}
 
 
@@ -51,12 +54,15 @@
 			background-color: #5b2631;
 			color: #ffeee3;
 			letter-spacing: 5px; border-radius: 5px;
-			padding: 5px; margin: 5px;
+			padding: 3px 5px 3px 8px; margin: 0px;
 		}
 
 		div#pastcont {
 			margin-top: 40px;
-			font-size: 24px;
+			font-size: 20px;
+		} #foot {
+			text-align: right;
+			margin-top: 50px;
 		}
 
 	</style>
@@ -64,7 +70,7 @@
 <body>
 	<div class="container">
 		<h1>28 raisons pour 28 mois</h1>
-		<p id="explan">Pour nos 28 mois, et pour que la prochaine fois qu'on te demande ce que j'ai déjà fait de romantique pour toi, je t'ai préparé mon top 28 des raisons qui font de toi ma personne préférée. Mais comme je suis un peu sadique, tu n'en auras qu'une par jour ;)</p>
+		<p id="explain">Pour nos 28 mois, je t'ai préparé mon top 28 des raisons qui font de toi ma personne préférée. C'était vraiment pas facile de me limiter à 28... Mais comme je veux pas te noyer d'amour d'un coup, tu n'en auras qu'une par jour ;)</p>
 
 		<div id='rcont'>
 			<span id="reasonNumber"></span>
@@ -77,46 +83,29 @@
 
 		<div id='pastcont'>
 			<p id="past"></p>
+			<p id='foot'>Je t'aime! ♥<p>
 		</div>
 
 	</div>
 
 	<script type="text/javascript">
-		var words = [
-			"Tu es quelqu'un de bien. Tu as de belles valeurs et un grand sens de la morale. J'admire ta vision du monde et tu m'inspires à devenir quelqu'un de meilleur.",
-			"Tu fais toujours le bien autour de toi. Tes ami(e)s, tes parents, moi; on a tous enormément de chance de t'avoir. On peut compter sur toi et tu sais être présente sans qu'on te le demande.",
-			"L'excès de joie sur ton visage quand tu aperçois un doggo me rend ",
-			"",
-			"J'aime beaucoup trop la cuisine que tu prépares. Quand je vois l'amour que t'y met, et toutes les petites attentions qui vont dans mes lunchs, ça fait fondre mon coeur! En plus, c'est fucking bon!!!",
 
-			"",
-			"Tu es clairement la meilleur personne à emmener en road trip. Tu as une curiosité et un enthousiasme communicatif. J'aime découvrir le monde avec toi et j'ai hate à notre prochain voyage!",
-			"",
-			"J'adore comme tu es facilement malaisée en public. Ta manière de rougir quand j'attire l'attention sur nous ma fait beaucoup rire et je trouve ça incroyablement cuuute!",
-			"",
+var alph = "8* #Tg[O59x=m4+inLUdlvçèHMk]!o:f-B;bs?raqIhc1CQ,}P%2y(6<7uDê_Eéj&S'{3YWJpt.0NzwAF/à>eR)";
+var words = ['0]cB!+A,msC{,Itc<N+.gm-AmpIêFp/fsA%4M:Slêé0m99!2U >WItcI:2<9Ly kLtNrrm2I 161:SDêMiff2g(4O>ltw7pOI<A;tOçx8NrrNRIjpULN>8[k2:90AxUHO 3t7./y9.b7éNr8ê_B/Hsgbs {dD', '*srQbb0A;4Otx)6cNP2<9L éml76ADv]0Ap-OoxNéWrN}MA6b;}ldzrè/?= mUIMW[9c25Rs!(CLà6t]uB/<3[s4cQlupWya+_d:6O>x8êé2!21.LyJM*T](259zADCLçStAFrT9I91-vOW3té2N+D.L!;k635c[5++xm?1iSt9éBb+Md:1', "0]cB!+àx6fcOF3t]rm2I mfM:SI5rr&9zk1-vOW'êr}T9<.(U kWç)F</Rzg8#O+rt9zrP!sADtcMxlp]=/c3xb4OO6t]urN!M-1tIMllYrrbI2 p-l(luppè/>Uo:! m8Q4W[4%6!Ls mF4t_B/2_.DUwa>t6]r<wwgLD1>StycyvRz.L*caHk97y/B3h6v r", '0]cB!+9[mUqae86c25cê,m-}O<tE=rb6wxb4viSlê(B!+3é:-laelêF.:]+!z4ImSuê][/HUdp?cOLtzlB!ezg*#OêSup]r.+H.*fwuW,6c<NB6.fyO{e3êkB:}3[f4OçS)zEBP%sAl61(Stycçv]{', '<sF2T9IMm<é(xIhcç:IHAb<O(r)[7yN+A,mUw{W75nvf%sk U2{l8NcmN+_d:yO:,èYW[:+A,mUwNBtYrça+sjL ;{63[c7N}Iém l>SlêFçS9<j:CvQWH]7r4I<jLb1kLtYrp/-9[DDIuW[9c{f]MAQCvod3ê(S5+àdmtcrWCtcvmY0?LêJOLuêp[br6[lUqaemRY', "wtc0/,6[LbémmItc049àA*ClrW:]rrb9Ik1fwmS8êk0:RT?L=O:lt5Wy=9IdpU8mr8êeS5<s!*jOtStYl0TY0.L ;{14]Ap/,sopê;{(t9éBb+Md:1O+xIcrp/<skL4iàcçpryb90A2Cv>W#6cJN298Ly;{ 3t7.!+A,:ULOW7)=p!9<jL=O>,èp(B:+s[DCcOW7z=p'", '0]c{f]0A*CétxI5zrm9IM:4vmlIcW[:+D.L ;M<tErp/22g34TQ!tcrp/ew!m-wQ!tYW2k+3[L<O>xI[c=5Iz z! k6tNrrb6w[D4OoStcl04I6! UmkW76=ç/<3 8  }Wl]ArSI6Am O>rt[F2!+=j(4OàdQ[ryS9Ik6-ImvIsWy/RsAb4OoS>9u<N)', "P9up/%wg2CveWw]7rbwsk*Uw}>]mnrT26kLsJPF4]Ar+2Ik/4ià*)x=B/ewkL ;{14]Ap'+F[L ,OW3t_>/<U.2 Oçx8êeSNYzA<tlm8Q47<NêI.*Ul:WusFrb63g2fA", '<sF<v%sADCLçStc=rN}Iv6êl:S>6uç/Hwx6fIpSt6ur&Y.x:êAmpèê(05]é!mUHOWç)=IO%I:p<voW,sFçS]z.LsJP6u6uçOI<A2tcme4]zrT9Iv6fwmn39=AvYHA(fcOW3ccmN+M!1tkOW[9c25<zd{<q:S>6uç/<9,p  r', '0]cB!+9[mUzOdl)uyN}I.M cYF3YryS+Wd(  mF3t]0m92.f AmpIêFp/Rzos4cQctNrp/H3 m-wQWg5F2T9<jL6;{tkê(0O}IjpU QWç6zç69Iv:b!:Stycçv]J .! eW<6cpf]0A<t m6IêkSP%zo:yOyl8NEB/-skL*l}Slêz2SYwj:CvQW#]c}v!D.L4wmd3[]B:+ê76-xOWH]rrSYI.21', '0]cB!+W,Dhlkttgr7m9{AF4cMxI[E*a+i.Ly1MLtx=B/0sA2tlQW4gE2e.I9mUMOW76upN%I 6fImL)teB/fwhLCvOW,6cçN+M!1tkOW)te.v&wMb4LOeuêFçS]zof  rWCteS:9IopA;{d#s>[O+i.L! m83YFy=9IB1!LOeuêLif]IépUI(xç6c0P}0gLD1{6D1', '0srp/Bzo:! k6t[(0:RkA&<Im1I[]B/OIx/w}a*38cvf%Mdp BmpIêz0O}Ix:6 m*3[c=TIMg1-IuWu]c0:%6=myOgWç6zçN%I!6fIae89N7N+2P]4OàxI[z=N+;A%Cé>!tc=rbI2é(4voLt*FAO-s m-we<Dê)iN}MA(<cOWT6zr&9zk1-vOLt4W}T9Im61', '0]cB!+M!ryOarg6AçN+D7myz}>u1cqP+0o:yOPH]6kçN%IxmyOiS8[cAvH2.LfMQWl)uç/9MAQ<l}St9NpS%wB*f;kW#6cçN}Ié(w3{tQ[cvvYzA;w}arg57./eê.:- çS8cc[59Iop cOW]]EçP%s&', '0srp/}s8{U kWu9N0:!wncU:YF3êz2/R9A]<v%r3[c[5+H.pUHOW])u{O2<BmU kWu)7>/R9A2<lQW>6c{f]z.L2 Pr])=v/fU.Q, ><tPAç;YzAfà1m1èYF2!+3,%slpW]6Açf]<.2Uzyxu)z>/9MA;4Imm4pzrO-Io:! mF3êEB/%wé84MOdD1', '0]cB!+HxmfvOW#6cpP%H!:y Q<tE=r&9<kmyOQxIwryS+w,MU1{6ç6zrfBsBLb QW76]2S90A6 wOeupWy!)Ib/4I>Wç9ABT9<jL*cp )[7Jm9I 6fIm64]LSP%0A*6!QWèhk.6<6yéULa>tAFrT9Iv6fwmm4t_.N+;ADD1%r3êpSO}k', '0]cyN+i,l4Im(è[c{f<6xm! k6DêC[/}wg2Ulie45r./-skL2lP>lêrç/ez.fbcOW3tcAvHHjmUMOLtpu{v%2o*f;kLtYFy-Yw[*4Im(4]Ar59Ié6yOtrN6ArO!i,2  çS8c!r>YI[mUcPnèpzpN}Ié6yO:SlêF[S%skLy1kLt4WyS9Pjm#'];
 
-			"",
-			"",
-			"",
-			"",
-			"",
+		// obfuscate
+		function encrypt(w,k) {
+			var encryptWord = "";
+			for (var i = 0; i < w.length; i++) {
+				encryptWord += alph.charAt( (alph.indexOf(w.charAt(i)) + alph.indexOf(k.charAt(i%k.length)) ) % alph.length);
+			} return encryptWord;
+		} function decrypt(w,k) {
+			var decryptWord = "";
+			for (var i = 0;i < w.length;i++) {
+				decryptWord += alph.charAt( ( (alph.indexOf(w.charAt(i)) + alph.length) - alph.indexOf(k.charAt(i%k.length)) ) % alph.length);
+			} return decryptWord;
+		}
 
-			"",
-			"",
-			"",
-			"",
-			"",
-
-			"",
-			"",
-			"",
-			"",
-			"",
-
-			"",
-			"",
-			""
-			];
 
 
 		// get next day by taking today date and setting the hour to 23:59:59
@@ -143,18 +132,22 @@
 
 
 		// show today quote
-		var day = new Date().getTime() - new Date("06/14/2020 00:00:00").getTime(); // change to 17!!
-		console.log(day);
+		var day = new Date().getTime() - new Date("06/17/2020 00:00:00").getTime(); // change to 17!!
 		day = Math.floor(day / (1000 * 3600 * 24));
-		console.log(day);
-		document.getElementById("reason").innerHTML = words[day];
-		document.getElementById("reasonNumber").innerHTML = "Raison "+(day+1);
+		if (day >= 0 && day < words.length) {
+			document.getElementById("reason").innerHTML = decrypt(words[day],'JuIsAmazingx3');
+			document.getElementById("reasonNumber").innerHTML = "Raison "+(day+1);
+		} else {
+			document.getElementById("reason").innerHTML = "La raison arrivera prochainement. Tiens bon!";
+			document.getElementById("reasonNumber").innerHTML = "[En transit...]";
+		}
+		
 
 
 		// show past quotes
 		var past = "";
-		for (var i = 0; i < day; i++) {
-			past += "Raison "+(i+1)+": "+words[i]+"<br>";
+		for (var i = day-1; i >= 0; i--) {
+			past += "<u>Raison "+(i+1)+"</u>: "+decrypt(words[i],'JuIsAmazingx3')+"<br><br>";
 		}
 		document.getElementById("past").innerHTML = past;
 
