@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>28 raisons pour 28 mois</title>
+	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+	<style>
+		*{ margin: 0; padding: 0; }
+		body {
+			background-image: url("https://cdn.pixabay.com/photo/2019/02/20/10/37/pattern-4008915_960_720.png");
+			font-family: "Sriracha";
+			color: #5b2631;
+		} div.container {
+			width: 75%;
+			margin: auto;
+			margin-top: 50px;
+			background-color: rgba(255,255,255,0.78);
+			padding: 20px 100px; border-radius: 50px;
+		}
+
+		h1 {
+			text-align: center;
+			border-bottom: 2px solid #333;
+			font-size: 48px;
+			padding-bottom: 0px;
+			margin-bottom: 30px;
+		} p#explan {
+			font-size: 24px;
+			text-align: justify;
+			margin-bottom: 50px;
+		}
+
+		div#rcont{
+			border: 2px solid #333;
+			border-radius: 10px;
+			text-align: center;
+		} div#rcont > span {
+			border-bottom: 1px solid #333;
+			font-size: 32px;
+		} div#rcont > #reason {
+			font-size: 32px;
+			font-style: italic;
+			margin-top: 20px; margin-bottom: 20px;
+		}
+
+
+		div #timercont {
+			font-size: 24px;
+			text-align: right;
+		} span#timer {
+			font-family: Consolas;
+			background-color: #5b2631;
+			color: #ffeee3;
+			letter-spacing: 5px; border-radius: 5px;
+			padding: 5px; margin: 5px;
+		}
+
+		div#pastcont {
+			margin-top: 40px;
+			font-size: 24px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>28 raisons pour 28 mois</h1>
+		<p id="explan">Pour nos 28 mois, et pour que la prochaine fois qu'on te demande ce que j'ai déjà fait de romantique pour toi, je t'ai préparé mon top 28 des raisons qui font de toi ma personne préférée. Mais comme je suis un peu sadique, tu n'en auras qu'une par jour ;)</p>
+
+		<div id='rcont'>
+			<span id="reasonNumber"></span>
+			<p id=reason></p>
+
+			<div id='timercont'>
+				<p>Prochaine raison: <span id="timer"></span></p>
+			</div>
+		</div>
+
+		<div id='pastcont'>
+			<p id="past"></p>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		var words = [
+			"Tu es quelqu'un de bien. Tu as de belles valeurs et un grand sens de la morale. J'admire ta vision du monde et tu m'inspires à devenir quelqu'un de meilleur.",
+			"Tu fais toujours le bien autour de toi. Tes ami(e)s, tes parents, moi; on a tous enormément de chance de t'avoir. On peut compter sur toi et tu sais être présente sans qu'on te le demande.",
+			"L'excès de joie sur ton visage quand tu aperçois un doggo me rend ",
+			"",
+			"J'aime beaucoup trop la cuisine que tu prépares. Quand je vois l'amour que t'y met, et toutes les petites attentions qui vont dans mes lunchs, ça fait fondre mon coeur! En plus, c'est fucking bon!!!",
+
+			"",
+			"Tu es clairement la meilleur personne à emmener en road trip. Tu as une curiosité et un enthousiasme communicatif. J'aime découvrir le monde avec toi et j'ai hate à notre prochain voyage!",
+			"",
+			"J'adore comme tu es facilement malaisée en public. Ta manière de rougir quand j'attire l'attention sur nous ma fait beaucoup rire et je trouve ça incroyablement cuuute!",
+			"",
+
+			"",
+			"",
+			"",
+			"",
+			"",
+
+			"",
+			"",
+			"",
+			"",
+			"",
+
+			"",
+			"",
+			"",
+			"",
+			"",
+
+			"",
+			"",
+			""
+			];
+
+
+		// get next day by taking today date and setting the hour to 23:59:59
+		var today = new Date();
+		var dd = String(today.getDate()).padStart(2, '0');
+		var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+		var yyyy = today.getFullYear();
+		var countDownDate = new Date(mm + '/' + dd + '/' + yyyy +" 23:59:59").getTime();
+
+		// update timer remaining
+		function zeropad(x, n=2) { return ("0000" + x).slice(-n); }
+		function updateTimer() {
+		  var now = new Date().getTime();
+		  var distance = countDownDate - now;
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		  var timer = zeropad(hours,2) + ":" + zeropad(minutes,2) + ":" + zeropad(seconds,2);
+		  document.getElementById("timer").innerHTML = timer;
+		}
+
+		// Update the count down every 1 second
+		updateTimer(); var x = setInterval( updateTimer, 1000);
+
+
+		// show today quote
+		var day = new Date().getTime() - new Date("06/14/2020 00:00:00").getTime(); // change to 17!!
+		console.log(day);
+		day = Math.floor(day / (1000 * 3600 * 24));
+		console.log(day);
+		document.getElementById("reason").innerHTML = words[day];
+		document.getElementById("reasonNumber").innerHTML = "Raison "+(day+1);
+
+
+		// show past quotes
+		var past = "";
+		for (var i = 0; i < day; i++) {
+			past += "Raison "+(i+1)+": "+words[i]+"<br>";
+		}
+		document.getElementById("past").innerHTML = past;
+
+
+
+	</script>
+</body>
+</html>
